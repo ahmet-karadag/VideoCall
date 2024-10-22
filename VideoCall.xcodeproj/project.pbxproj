@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1C411D7E2CC7A1D000E2DDCF /* StreamVideo in Frameworks */ = {isa = PBXBuildFile; productRef = 1C411D7D2CC7A1D000E2DDCF /* StreamVideo */; };
+		1C411D802CC7A1D000E2DDCF /* StreamVideoSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1C411D7F2CC7A1D000E2DDCF /* StreamVideoSwiftUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		1C411D6B2CC79EAD00E2DDCF /* VideoCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C411D802CC7A1D000E2DDCF /* StreamVideoSwiftUI in Frameworks */,
+				1C411D7E2CC7A1D000E2DDCF /* StreamVideo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +72,8 @@
 			);
 			name = VideoCall;
 			packageProductDependencies = (
+				1C411D7D2CC7A1D000E2DDCF /* StreamVideo */,
+				1C411D7F2CC7A1D000E2DDCF /* StreamVideoSwiftUI */,
 			);
 			productName = VideoCall;
 			productReference = 1C411D6B2CC79EAD00E2DDCF /* VideoCall.app */;
@@ -94,6 +103,9 @@
 			);
 			mainGroup = 1C411D622CC79EAD00E2DDCF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1C411D7C2CC7A1D000E2DDCF /* XCRemoteSwiftPackageReference "stream-video-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1C411D6C2CC79EAD00E2DDCF /* Products */;
 			projectDirPath = "";
@@ -177,7 +189,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -234,7 +246,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -255,6 +267,8 @@
 				DEVELOPMENT_TEAM = 3X35GW7AA8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +298,8 @@
 				DEVELOPMENT_TEAM = 3X35GW7AA8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -324,6 +340,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1C411D7C2CC7A1D000E2DDCF /* XCRemoteSwiftPackageReference "stream-video-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GetStream/stream-video-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.13.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1C411D7D2CC7A1D000E2DDCF /* StreamVideo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C411D7C2CC7A1D000E2DDCF /* XCRemoteSwiftPackageReference "stream-video-swift" */;
+			productName = StreamVideo;
+		};
+		1C411D7F2CC7A1D000E2DDCF /* StreamVideoSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C411D7C2CC7A1D000E2DDCF /* XCRemoteSwiftPackageReference "stream-video-swift" */;
+			productName = StreamVideoSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1C411D632CC79EAD00E2DDCF /* Project object */;
 }
